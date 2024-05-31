@@ -19,3 +19,8 @@ end
 group :development do
   gem "spring"
 end
+
+gem "graphql", "~> 2.3"
+
+gem "graphiql-rails", "~> 1.10", :group => :development
+gem "sass-rails", "~> 6.0", :group => :development
