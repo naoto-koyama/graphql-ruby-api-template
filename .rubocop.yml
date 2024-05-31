@@ -1,0 +1,78 @@
+AllCops:
+  TargetRubyVersion: 3.3
+  Exclude:
+    - 'bin/*'
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+  NewCops: enable
+  SuggestExtensions: false
+
+# クラスにコメントを残さなくても良い
+Style/Documentation:
+  Enabled: false
+
+# ネストした宣言は読みやすさに影響するため、チェックを無効
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# 必要に応じて空のメソッドが使われるため、チェックを無効
+Style/EmptyMethod:
+  Enabled: false
+
+# ハッシュのキーのスタイルを混在させない
+Style/HashSyntax:
+  EnforcedStyle: 'no_mixed_keys'
+
+# 日本語のコメントも許可
+Style/AsciiComments:
+  Enabled: false
+
+# &&と|に固定
+Style/AndOr:
+  Enabled: false
+
+# 条件判断と実行文で条件判断を強調したい時は後置IFをつかわないパターンがあるので
+Style/IfUnlessModifier:
+  Enabled: false
+
+# # ガード処理として先にreturn できる場合はそうした方がいいが可読性が落ちる場合は無理に適用しなくて良い
+Style/GuardClause:
+  Enabled: false
+
+# # Railsがダブルクォートなのでダブルクォート
+Style/StringLiterals:
+  EnforcedStyle: 'double_quotes'
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - 'db/migrate/*' # 定義設定なので複雑性を下げれないファイルのため対象外
+
+Layout/EndOfLine:
+    EnforcedStyle: lf
+
+Layout/LineLength:
+  Max: 140
+
+Metrics/BlockLength:
+  CountComments: false
+  Exclude:
+    - 'config/routes.rb'
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Max: 20
+  Exclude:
+    - 'db/migrate/*' # 定義設定なので複雑性を下げれないファイルのため対象外
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 200
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
