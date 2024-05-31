@@ -7,18 +7,21 @@ default: &default
 
 development:
   <<: *default
-  database: graphql_ruby_backend_development
-  username: graphql_ruby_backend_user
-  password: <%= ENV['MY_APP_DATABASE_PASSWORD'] %>
+  host:     <%= ENV['DB_HOST'] || '127.0.0.1' %>
+  database: <%= ENV['DB_NAME'] || 'graphql_ruby_backend_development' %>
+  username: <%= ENV['DB_USERNAME'] || 'root' %>
+  password: <%= ENV['DB_PASSWORD'] || '' %>
 
 test:
   <<: *default
-  database: graphql_ruby_backend_test
-  username: graphql_ruby_backend_user
-  password: <%= ENV['MY_APP_DATABASE_PASSWORD'] %>
+  host:     <%= ENV['DB_HOST'] || '127.0.0.1' %>
+  database: <%= ENV['DB_NAME'] || 'graphql_ruby_backend_test' %>
+  username: <%= ENV['DB_USERNAME'] || 'root' %>
+  password: <%= ENV['DB_PASSWORD'] || '' %>
 
 production:
   <<: *default
-  database: graphql_ruby_backend_production
-  username: graphql_ruby_backend_user
-  password: <%= ENV['MY_APP_DATABASE_PASSWORD'] %>
+  host:     <%= ENV['DB_HOST'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
