@@ -1,26 +1,20 @@
 source "https://rubygems.org"
 
 ruby "3.3.1"
-
 gem "rails", "~> 7.1.3", ">= 7.1.3.3"
 
+gem 'graphiql-rails', '~> 1.10', :group => :development
+gem 'graphql', '~> 2.3'
 gem 'pg', '~> 1.1'
-gem "puma", ">= 5.0"
-gem "tzinfo-data", platforms: %i[ windows jruby ]
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
-# gem "rack-cors"
+gem 'puma', '>= 5.0'
+gem 'sass-rails', '~> 6.0', :group => :development
+gem 'tzinfo-data', platforms: %i[ windows jruby ]
 
 group :development, :test do
-  gem "debug", platforms: %i[ mri windows ]
-  gem "rubocop"
+ gem 'debug', platforms: %i[ mri windows ]
+ gem 'rubocop'
 end
 
 group :development do
-  gem "spring"
+ gem 'spring'
 end
-
-gem "graphql", "~> 2.3"
-
-gem "graphiql-rails", "~> 1.10", :group => :development
-gem "sass-rails", "~> 6.0", :group => :development
