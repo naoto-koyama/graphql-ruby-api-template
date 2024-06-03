@@ -85,6 +85,8 @@ mv graphql_ruby_api_template_schema.rb <新しいリポジトリの名前>_schem
 - PostgresSQLのバージョン
   - Dockerfile.db
 - その他必要なgem
+- yarnおよびnodeのバージョン
+  - package.json
 
 # 立ち上げ方法
 ## 共通

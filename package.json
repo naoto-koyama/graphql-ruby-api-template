@@ -12,5 +12,9 @@
     "*.{rb,rake}|Gemfile": [
       "bundle exec rubocop -A --force-exclusion"
     ]
+  },
+  "volta": {
+    "node": "20.14.0",
+    "yarn": "3.6.4"
   }
 }
