@@ -12,8 +12,8 @@
 !/vendor/assets
 
 # Ignore all environment files (except templates).
-/.env*
-!/.env*.erb
+.env
+.env.development
 
 # Ignore all logfiles and tempfiles.
 /log/*

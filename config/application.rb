@@ -10,6 +10,10 @@ require "action_view/railtie"
 
 Bundler.require(*Rails.groups)
 
+if Rails.env.development?
+  Dotenv::Rails.load
+end
+
 module GraphqlRubyBackend
   class Application < Rails::Application
     config.load_defaults 7.1

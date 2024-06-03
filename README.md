@@ -67,35 +67,6 @@ mv graphql_ruby_backend_schema.rb <新しいリポジトリの名前>_schema.rb
   database: <%= ENV['DB_NAME'] || 'graphql_ruby_backend_development' %> # ここを変更(test, productionも同様)
 ```
 
-- bundle install
-```bash
-bundle install
-```
-
-- DB作成
-```bash
-rails db:create
-```
-
-- DBマイグレーション
-```bash
-rails db:migrate
-```
-
-- テスト実行
-```bash
-bundle exec rspec
-```
-
-- サーバー起動
-```bash
-rails s
-```
-
-- ブラウザでlocalhost:3000/graphqlにアクセス
-- GraphQLのクエリを実行
-- テストが通っていれば完了
-
 ## 必要に応じて設定の変更
 - rubyのバージョン
   - .ruby-version
@@ -108,3 +79,54 @@ rails s
 - PostgresSQLのバージョン
   - Dockerfile.db
 - その他必要なgem
+
+# 立ち上げ方法
+## Dockerを使う場合
+
+- Dockerコンテナをビルド
+```bash
+docker-compose build
+```
+
+- Dockerコンテナを立ち上げ
+```bash
+docker-compose up -d
+```
+
+- Databaseの作成
+```bash
+docker-compose run web rails db:create
+```
+
+- Databaseのマイグレーション
+```bash
+docker-compose run web rails db:migrate
+```
+
+## Dockerを使わない場合
+
+- 環境変数の設定
+  - .env.development.sampleをコピーして.env.developmentを作成
+```bash
+cp .env.development.sample .env.development
+```
+
+- bundle install
+```bash
+bundle install
+```
+
+- Databaseの立ち上げ
+```bash
+docker-compose up -d db
+```
+
+- Databaseの作成
+```bash
+rails db:create
+```
+
+- Databaseのマイグレーション
+```bash
+rails db:migrate
+```
