@@ -152,9 +152,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-ruby-backend@workspace:.":
+"graphql-ruby-api-template@workspace:.":
   version: 0.0.0-use.local
-  resolution: "graphql-ruby-backend@workspace:."
+  resolution: "graphql-ruby-api-template@workspace:."
   dependencies:
     husky: ^9.0.11
     lint-staged: ^15.2.5

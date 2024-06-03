@@ -36,7 +36,7 @@ forkした形跡を残したくない場合は以下の手順で進める
 
 1. このリポジトリをクローン
 ```bash
-git clone https://github.com/naoto-koyama/graphql-ruby-backend.git
+git clone https://github.com/naoto-koyama/graphql-ruby-api-template.git
 ```
 
 - リモートリポジトリを削除
@@ -58,14 +58,14 @@ git push -u origin main
 
 ## 共有設定
 
-- graphql_ruby_backend_schema.rbの名前を変更
+- graphql_ruby_api_template_schema.rbの名前を変更
 ```bash
-mv graphql_ruby_backend_schema.rb <新しいリポジトリの名前>_schema.rb
+mv graphql_ruby_api_template_schema.rb <新しいリポジトリの名前>_schema.rb
 ```
 
 - Database.ymlのdatabaseの設定を変更
 ```ruby
-  database: <%= ENV['DB_NAME'] || 'graphql_ruby_backend_development' %> # ここを変更(test, productionも同様)
+  database: <%= ENV['DB_NAME'] || 'graphql_ruby_api_template_development' %> # ここを変更(test, productionも同様)
 ```
 
 - package.jsonのnameを変更

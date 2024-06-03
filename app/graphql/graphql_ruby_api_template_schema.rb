@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class GraphqlRubyBackendSchema < GraphQL::Schema
+class GraphqlRubyApiTemplateSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
 

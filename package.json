@@ -1,5 +1,5 @@
 {
-  "name": "graphql-ruby-backend",
+  "name": "graphql-ruby-api-template",
   "private": true,
   "scripts": {
     "prepare": "husky"

@@ -8,14 +8,14 @@ default: &default
 development:
   <<: *default
   host:     <%= ENV['DB_HOST'] || 'postgres' %>
-  database: <%= ENV['DB_NAME'] || 'graphql_ruby_backend_development' %>
+  database: <%= ENV['DB_NAME'] || 'graphql_ruby_api_template_development' %>
   username: <%= ENV['DB_USERNAME'] || 'root' %>
   password: <%= ENV['DB_PASSWORD'] || '' %>
 
 test:
   <<: *default
   host:     <%= ENV['DB_HOST'] || 'postgres' %>
-  database: <%= ENV['DB_NAME'] || 'graphql_ruby_backend_test' %>
+  database: <%= ENV['DB_NAME'] || 'graphql_ruby_api_template_test' %>
   username: <%= ENV['DB_USERNAME'] || 'root' %>
   password: <%= ENV['DB_PASSWORD'] || '' %>
 
