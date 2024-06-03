@@ -1,0 +1,16 @@
+{
+  "name": "graphql-ruby-backend",
+  "private": true,
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5"
+  },
+  "lint-staged": {
+    "*.{rb,rake}|Gemfile": [
+      "bundle exec rubocop -A --force-exclusion"
+    ]
+  }
+}

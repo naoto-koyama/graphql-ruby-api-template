@@ -11,6 +11,7 @@
 - Docker
 - PostgresSQL 16.3(Docker Compose)
 - GraphQL
+- husky(lint-staged)
 
 # 使い方
 ## forkする場合
@@ -67,6 +68,11 @@ mv graphql_ruby_backend_schema.rb <新しいリポジトリの名前>_schema.rb
   database: <%= ENV['DB_NAME'] || 'graphql_ruby_backend_development' %> # ここを変更(test, productionも同様)
 ```
 
+- package.jsonのnameを変更
+```json
+  "name": "<新しいリポジトリの名前>"
+```
+
 ## 必要に応じて設定の変更
 - rubyのバージョン
   - .ruby-version
@@ -81,6 +87,12 @@ mv graphql_ruby_backend_schema.rb <新しいリポジトリの名前>_schema.rb
 - その他必要なgem
 
 # 立ち上げ方法
+## 共通
+- huskyの設定
+```bash
+yarn install
+```
+
 ## Dockerを使う場合
 
 - Dockerコンテナをビルド
