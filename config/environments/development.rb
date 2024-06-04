@@ -55,4 +55,9 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+  allowed_hosts = (ENV["CORS_ALLOWED_ORIGINS"] || "http://localhost:3000").split(",")
+  allowed_hosts.each do |host|
+    config.hosts << URI.parse(host).host
+  end
 end

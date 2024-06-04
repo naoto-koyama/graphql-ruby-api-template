@@ -8,6 +8,7 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.3"
 gem "graphql", "~> 2.3"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
+gem "rack-cors"
 gem "tzinfo-data", platforms: %i[windows jruby]
 
 group :development do
