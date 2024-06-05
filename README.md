@@ -58,11 +58,6 @@ git push -u origin main
 
 ## 共有設定
 
-- graphql_ruby_api_template_schema.rbの名前を変更
-```bash
-mv graphql_ruby_api_template_schema.rb <新しいリポジトリの名前>_schema.rb
-```
-
 - Database.ymlのdatabaseの設定を変更
 ```ruby
   database: <%= ENV['DB_NAME'] || 'graphql_ruby_api_template_development' %> # ここを変更(test, productionも同様)
