@@ -14,6 +14,7 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 group :development do
   gem "dotenv-rails"
   gem "graphiql-rails", "~> 1.10"
+  gem "propshaft", "~> 0.9.0"
   gem "spring"
 end
 
