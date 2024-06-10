@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Types
-  module Base
-    class Argument < GraphQL::Schema::Argument
+  module Enums
+    class Base < GraphQL::Schema::Enum
     end
   end
 end
