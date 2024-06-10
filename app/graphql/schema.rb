@@ -2,7 +2,7 @@
 
 class Schema < GraphQL::Schema
   mutation(Types::MutationType)
-  query(Types::QueryType)
+  query(Types::Objects::QueryType)
 
   # For batch-loading (see https://graphql-ruby.org/dataloader/overview.html)
   use GraphQL::Dataloader
