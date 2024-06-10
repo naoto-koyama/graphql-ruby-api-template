@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Schema < GraphQL::Schema
-  mutation(Types::MutationType)
+  mutation(Types::Objects::MutationType)
   query(Types::Objects::QueryType)
 
   # For batch-loading (see https://graphql-ruby.org/dataloader/overview.html)
