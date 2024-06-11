@@ -115,9 +115,8 @@ docker-compose run web rails db:migrate
 ## Dockerを使わない場合
 
 - 環境変数の設定
-  - .env.development.sampleをコピーして.env.developmentを作成
 ```bash
-cp .env.development.sample .env.development
+cp .env.sample .env
 ```
 
 - bundle install

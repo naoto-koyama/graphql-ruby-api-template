@@ -12,7 +12,6 @@ gem "rack-cors"
 gem "tzinfo-data", platforms: %i[windows jruby]
 
 group :development do
-  gem "dotenv-rails"
   gem "graphiql-rails", "~> 1.10"
   gem "propshaft", "~> 0.9.0"
   gem "spring"
@@ -20,6 +19,7 @@ end
 
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
+  gem "dotenv-rails"
   gem "rubocop", require: false
   gem "rubocop-rails", require: false
 end

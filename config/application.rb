@@ -10,7 +10,7 @@ require "action_view/railtie"
 
 Bundler.require(*Rails.groups)
 
-if Rails.env.development?
+if Rails.env.development? || Rails.env.test?
   Dotenv::Rails.load
 end
 
